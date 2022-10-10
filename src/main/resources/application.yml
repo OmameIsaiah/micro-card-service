@@ -3,29 +3,29 @@ spring:
     name: card-micro-service
   boot:
     admin:
-      url: http://localhost:2031/
+      url: http://63.250.55.150:6060/admin-server/
 
         #spring.boot.admin.client.url=http://localhost:6060/
         #spring.boot.admin.client.username=admin
         #spring.boot.admin.client.password=admin
         #client:
-        #username: swipe_user
-        #password: swipe_password
+      #username: swipe_user
+      #password: swipe_password
       #instance:
       #metadata:
       #user.name: swipe_user
       #user.password: swipe_password
 server:
-  port: 2023
+  port: 6060
   servlet:
-    contextPath: /card
+    contextPath: /card-micro-service
 
 eureka:
   client:
     registryFetchIntervalSeconds: 5
     enabled: true
     service-url:
-      defaultZone: http://localhost:2020/eureka
+      defaultZone: http://63.250.55.150:6060/eureka/eureka
     instance:
       preferIpAddress: true
       leaseRenewalIntervalInSeconds: 10
